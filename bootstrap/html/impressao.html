@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Solicitar</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<h2>Solicitação de impressão</h2>
+		</div>
+		<form class="form-horizontal" id="formImpressao">
+			<fieldset>
+
+				<!-- Formulario nome -->
+				<legend>Formulario</legend>
+
+				<!-- Texto -->
+				<div class="form-group">
+					<label class="col-md-4 control-label">Nome da Atividade</label>
+					<div class="col-md-5">
+						<input id="id_atividade" name="atividade" type="text" placeholder="Prova"
+							class="form-control input-md">
+					</div>
+				</div>
+
+				<!-- Escolher a turma-->
+				<div class="form-group">
+					<label class="col-md-4 control-label">Turma</label>
+					<div class="col-md-5">
+						<input id="id_turma" name="turma" type="text" placeholder="2° Alimentos"
+							class="form-control input-md">
+					</div>
+				</div>
+
+				<!-- Seleção do turno -->
+				<div class="form-group">
+					<label class="col-md-4 control-label">Turno</label>
+					<div class="col-md-5">
+						<select id="id_turno" name="turno" class="form-control">
+							<option value="">------------</option>
+							<option value="1">Matutino</option>
+							<option value="2">Vespertino</option>
+							<option value="3">Noturno</option>
+						</select>
+					</div>
+				</div>
+
+				<!-- Data que vai necessitar-->
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="id_fechan">Data que necessita</label>
+					<div class="col-md-5">
+						<input id="id_dataNecessita" name="dataNecessita" type="date" class="form-control input-md">
+					</div>
+				</div>
+
+				<!-- Seleção do lado da Folha -->
+				<div class="form-group">
+					<label class="col-md-4 control-label">Lado da Folha</label>
+					<div class="col-md-5">
+						<select id="id_ladoFolha" name="ladoFolha" class="form-control">
+							<option value="">------------</option>
+							<option value="1">Frente</option>
+							<option value="2">Frente e Verso</option>
+						</select>
+					</div>
+				</div>
+
+				<!-- Quantidade de folhas-->
+				<div class="form-group">
+					<label class="col-md-4 control-label">Quantidade</label>
+					<div class="col-md-5">
+						<input id="id_quantidade" name="quantidade" type="number" placeholder="10" class="form-control input-md">
+					</div>
+				</div>
+
+				<!-- Local de envio do arquivo que vai ser impresso-->
+				<div class="form-group">
+					<label class="col-md-4 control-label">Arquivo</label>
+					<div class="col-md-5">
+						<input type="file" class="form-control-file" id="InputFile" name="InputFile" aria-describedby="fileHelp">
+					</div>
+				</div>
+
+				<!-- Grupo de botões-->
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="id_aceptar"></label>
+					<div class="col-md-8">
+						<button id="id_aceptar" name="id_aceptar" class="btn btn-success">Solicitar</button>
+						<button id="id_cancelar" name="id_cancelar" class="btn btn-danger">Cancelar</button>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="../js/impressao.js"></script>
+</body>
+</html>
